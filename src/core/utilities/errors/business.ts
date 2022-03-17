@@ -14,7 +14,12 @@ export default class BusinessError extends CustomError {
   }
 }
 
+export const ValidationCodeError = {
+  INVALID_PARAMS: 'invalid_params',
+};
+
 export const UserCodeError = {
   EMAIL_ALREADY_REGISTERED: 'email_already_registered',
+  PHONE_ALREADY_REGISTERED: 'phone_already_registered',
   USER_NOT_FOUND: 'user_not_found',
 };

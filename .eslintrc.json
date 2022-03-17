@@ -28,6 +28,7 @@
        }
     ],
     "import/no-unresolved": "error",
+    "indent": "error",
     "linebreak-style": "off",
     "max-len": [
       "error",

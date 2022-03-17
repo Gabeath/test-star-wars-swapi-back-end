@@ -24,6 +24,12 @@
       "@middlewares/*": [
         "./core/middlewares/*"
       ],
+      "@models/*": [
+        "./core/models/*"
+      ],
+      "@repositories/*": [
+        "./core/repositories/*"
+      ],
       "@utilities/*": [
         "./core/utilities/*"
       ]
