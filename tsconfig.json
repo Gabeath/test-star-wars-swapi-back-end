@@ -21,6 +21,9 @@
       "@app/*": [
         "./app/src/*"
       ],
+      "@mechanisms/*": [
+        "./core/mechanisms/*"
+      ],
       "@middlewares/*": [
         "./core/middlewares/*"
       ],

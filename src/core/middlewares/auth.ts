@@ -41,7 +41,9 @@ const auth = () => async (req: Request, res: Response, next: NextFunction) => {
       throw new UnauthorizedError();
     }
 
-    req.session.userId = payload.userId;
+    req.session = {
+      userId: payload.userId,
+    }
 
     return next();
   } catch (err) {

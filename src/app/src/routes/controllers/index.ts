@@ -10,6 +10,7 @@ router.get('/status', (req, res) => res.json({
 }));
 
 router.use('/login', require('./login').default);
+router.use('/people', require('./people').default);
 router.use('/user', require('./user').default);
 
 export default router;

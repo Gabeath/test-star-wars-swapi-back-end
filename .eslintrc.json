@@ -20,6 +20,8 @@
     "jest"
   ],
   "rules": {
+    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/no-var-requires": 0,
     "import/extensions": [
        "error",
        "ignorePackages",
@@ -31,7 +33,7 @@
        }
     ],
     "import/no-unresolved": "error",
-    "indent": "error",
+    "indent": "off",
     "linebreak-style": "off",
     "max-len": [
       "error",
