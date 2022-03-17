@@ -15,6 +15,7 @@ export default class BusinessError extends CustomError {
 }
 
 export const ValidationCodeError = {
+  INVALID_CREDENTIALS: 'invalid_credentials',
   INVALID_PARAMS: 'invalid_params',
 };
 
