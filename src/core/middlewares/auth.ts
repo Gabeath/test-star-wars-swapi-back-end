@@ -43,7 +43,7 @@ const auth = () => async (req: Request, res: Response, next: NextFunction) => {
 
     req.session = {
       userId: payload.userId,
-    }
+    };
 
     return next();
   } catch (err) {
