@@ -1,6 +1,6 @@
 import request from 'supertest';
 
-import server from '../../src/app/src/server';
+import server from '@app/server';
 
 describe('Authentication', () => {
   it('should authenticate with valid credentials', async () => {
