@@ -1,11 +1,9 @@
-import { PrismaClient, Prisma } from '@prisma/client';
-
-import { IUser } from '@models/user';
+import { PrismaClient, Prisma, Users } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
 export default class UserRepository {
-  static async create(user: IUser) {
+  static async create(user: Users) {
     return prisma.users.create({
       data: {
         name: user.name,

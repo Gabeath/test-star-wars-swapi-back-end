@@ -1,4 +1,4 @@
-import { IUser } from '@models/user';
+import { Users } from '@prisma/client';
 
 import UserRepository from '@repositories/user';
 
@@ -6,7 +6,7 @@ import BusinessError, { UserCodeError } from '@utilities/errors/business';
 import { cryptPassword, generateJWT } from '@utilities/utils';
 
 export default class UserService {
-  static async create(user: IUser) {
+  static async create(user: Users) {
     const userSaved = await UserRepository.selectOne({
       where: {
         OR: [
@@ -29,7 +29,7 @@ export default class UserService {
       email: user.email,
       phone: user.phone,
       password: passwordEncrypted,
-    });
+    } as Users);
 
     return { token: generateJWT({ userId: userCreated.id }) };
   }
