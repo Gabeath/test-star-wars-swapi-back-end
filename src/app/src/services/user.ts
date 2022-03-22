@@ -16,9 +16,9 @@ export default class UserService {
       },
     });
 
-    if (userSaved?.email) {
+    if (userSaved?.email === user.email) {
       throw new BusinessError(UserCodeError.EMAIL_ALREADY_REGISTERED);
-    } else if (userSaved?.phone) {
+    } else if (userSaved?.phone === user.phone) {
       throw new BusinessError(UserCodeError.PHONE_ALREADY_REGISTERED);
     }
 
